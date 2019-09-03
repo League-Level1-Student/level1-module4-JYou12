@@ -18,16 +18,20 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+
+import javafx.scene.input.KeyCode;
+
 import java.io.IOException;
 
 public class SimonSays extends KeyAdapter {
 
+	
 	HashMap<Integer, String> images = new HashMap<Integer, String>();
 	private int imageIndex;
 	private int tries = 0;
-	private boolean simonSays = false;
+	private boolean simonSays;
 	Date timeAtStart;
-
+	int points = 0;
 	// Complete steps 1 - 7 before you test
 	// 1. Declare a JFrame variable
 	JFrame frame;
@@ -48,30 +52,47 @@ public class SimonSays extends KeyAdapter {
 
 	public void keyPressed(KeyEvent e) {
 		// 15. Make a points variable to track the score.
-		
+
 		// 16. If the keyCode matches the imageIndex and "Simon says"
-		
+		if(e.getKeyCode() == imageIndex && simonSays == true) {
+			points++;
+			speak("CORRECT!");
+		}
 		// 17. Increase the value of score
-
+		
 		// 18. Use the speak method to tell the user they were correct
-
+		
 		// 19. If the keyCode doesn't match the imageIndex and "Simon didn't
 		// say..."
-
+		if(!(e.getKeyCode() == imageIndex) && simonSays == false) {
+			points++;
+				speak("CORRECT!");
+}
+		
+		if(!(e.getKeyCode() == imageIndex) && simonSays == true) {
+				speak("WRONG!");
+}
+		
+		if(e.getKeyCode() == imageIndex && simonSays == false) {
+				speak("WRONG!");
+}
 		// 20. Increase the value of score
 
 		// 21. Use the speak method to tell the user they were correct
-
 		// 22. Increment tries by 1
-
+		tries ++;
 		// 25. If tries is greater than 9 (or however many you want)...
-
+		if(tries > 9) {
+			JOptionPane.showMessageDialog(null, "Score: " + points);
+		}
 		// 26. Tell the user their score
 
 		// 27. Exit the program
-
+		
 		// 23. Dispose of the frame
-
+			frame.dispose();
+			showImage();
+		
 		// 24. Call the showImage method to show a new image
 	}
 
@@ -94,13 +115,15 @@ public class SimonSays extends KeyAdapter {
 		frame.addKeyListener(this);
 		// 12. Create a new instance of Random
 		Random rand = new Random();
-		int randomInt = rand.nextInt(1);
+		int randomInt = rand.nextInt(2);
 		// 13. Use the Random and the speak method to either say
 		// "Simon says press this key" or "Press this key"
 		if(randomInt == 0) {
 			speak("Simon says press this key");
+			simonSays = true;
 		}else if(randomInt == 1) {
 			speak("Press this key");
+			simonSays = false;
 		}
 		// 14. Above, set the value of simonSays to true/false appropriately
 

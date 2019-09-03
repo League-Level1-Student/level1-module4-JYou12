@@ -54,7 +54,7 @@ public class Jeopardy implements ActionListener {
 		// 2. Give your frame a title
 		frame.setTitle("Jeopardy");
 		// 3. Create a JPanel variable to hold the header using the createHeader method
-		JPanel header = createHeader("Latin");
+		JPanel header = createHeader("Math");
 		
 		// 4. Add the header component to the quizPanel
 		quizPanel.add(header);
@@ -119,7 +119,7 @@ public class Jeopardy implements ActionListener {
 		// If the buttonPressed was the firstButton
 		if(buttonPressed == firstButton) {
 			// Call the askQuestion() method
-		askQuestion("Victoria, Victoriae", "what is victory in latin", 100);
+		askQuestion("1 + 1", "2", 100);
 		firstButton.setText(null);
 		}
 		// Complete the code in the askQuestion() method. When you play the game, the score should change.
@@ -127,19 +127,19 @@ public class Jeopardy implements ActionListener {
 		// If the buttonPressed was the secondButton
 		if(buttonPressed == secondButton) {
 			// Call the askQuestion() method with a harder question
-			askQuestion("teneo, tenere", "what is hold in latin", 200);
+			askQuestion("19 + 27", "46", 200);
 			secondButton.setText(null);
 		}
 		
 		if(buttonPressed == thirdButton) {
 			// Call the askQuestion() method with a harder question
-			askQuestion("arma, armorum", "what is arms in latin", 400);
+			askQuestion("(-15) + 36 * (-84) + 35", "3004", 400);
 			thirdButton.setText(null);
 		}
 		
 		if(buttonPressed == fourthButton) {
 			// Call the askQuestion() method with a harder question
-			askQuestion("ubi", "what is where in latin", 600);
+			askQuestion("5,592,384 / 584", "9576", 600);
 			fourthButton.setText(null);
 		}
 		// Clear the text on the button that was pressed (set the button text to nothing)
