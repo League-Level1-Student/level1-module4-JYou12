@@ -20,11 +20,13 @@ public class TypingTutor implements KeyListener {
 		
 		currentLetter = generateRandomLetter();
 		letter = "" + currentLetter;
-		
+
+
 		label = new JLabel(letter);
 		label.setFont(label.getFont().deriveFont(28.0f));
 		label.setHorizontalAlignment(JLabel.CENTER);
-		
+		label.setOpaque(true);
+
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		label.setVisible(true);
