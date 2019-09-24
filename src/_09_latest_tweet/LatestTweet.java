@@ -19,7 +19,7 @@ public class LatestTweet implements ActionListener {
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
 	JButton button = new JButton("Search");
-	JTextField textField = new JTextField();
+	JTextField textField = new JTextField(10);
 	
 	void run(){
 	
@@ -30,6 +30,7 @@ public class LatestTweet implements ActionListener {
 	panel.add(button);
 
 	button.addActionListener(this);
+	frame.pack();
 	
 }
 
