@@ -125,6 +125,8 @@ int button;
 			buttonN =12;
 		}
 		
+		
+		
 	}
 	
 	void speak(String words) { 
@@ -139,11 +141,57 @@ int button;
 	public void actionPerformed(ActionEvent e) {
 		
 	
-		if(didHit(buttonNumber) == true) {
+		if(buttonN == 2 && e.getSource() == b1) {
 			System.out.println("HIT");
-		}else if(didHit(buttonNumber) == false){
+		}else if(buttonN == 3 && e.getSource() == b2) {
+			System.out.println("HIT");
+		}else if(buttonN == 4 && e.getSource() == b3) {
+			System.out.println("HIT");
+		}else if(buttonN == 5 && e.getSource() == b4) {
+			System.out.println("HIT");
+		}else if(buttonN == 6 && e.getSource() == b5) {
+			System.out.println("HIT");
+		}else if(buttonN == 7 && e.getSource() == b6) {
+			System.out.println("HIT");
+		}else if(buttonN == 8 && e.getSource() == b7) {
+			System.out.println("HIT");
+		}else if(buttonN == 9 && e.getSource() == b8) {
+			System.out.println("HIT");
+		}else if(buttonN == 10 && e.getSource() == b9) {
+			System.out.println("HIT");
+		}else if(buttonN == 11 && e.getSource() == b10) {
+			System.out.println("HIT");
+		}else if(buttonN == 12 && e.getSource() == b11) {
+			System.out.println("HIT");
+		}else if(buttonN == 1 && e.getSource() == b0) {
+			System.out.println("HIT");
+			
+		}else if(!(buttonN == 2 && e.getSource() == b1)) {
+			System.out.println("MISS");
+		}else if(!(buttonN == 3 && e.getSource() == b2)) {
+			System.out.println("MISS");
+		}else if(!(buttonN == 4 && e.getSource() == b3)) {
+			System.out.println("MISS");
+		}else if(!(buttonN == 5 && e.getSource() == b4)) {
+			System.out.println("MISS");
+		}else if(!(buttonN == 6 && e.getSource() == b5)) {
+			System.out.println("MISS");
+		}else if(!(buttonN == 7 && e.getSource() == b6)) {
+			System.out.println("MISS");
+		}else if(!(buttonN == 8 && e.getSource() == b7)) {
+			System.out.println("MISS");
+		}else if(!(buttonN == 9 && e.getSource() == b8)) {
+			System.out.println("MISS");
+		}else if(!(buttonN == 10 && e.getSource() == b9)) {
+			System.out.println("MISS");
+		}else if(!(buttonN == 11 && e.getSource() == b10)) {
+			System.out.println("MISS");
+		}else if(!(buttonN == 12 && e.getSource() == b11)) {
+			System.out.println("MISS");
+		}else if(!(buttonN == 1 && e.getSource() == b0)) {
 			System.out.println("MISS");
 		}
+		
 		
 	
 
