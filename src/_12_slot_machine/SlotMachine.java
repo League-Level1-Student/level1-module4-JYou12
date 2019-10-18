@@ -35,7 +35,7 @@ public class SlotMachine {
 	 	cherry = createLabelImage("cherry.jpeg");
 	 	grape = createLabelImage("grapes.jpeg");
 	 	orange = createLabelImage("orange.png");
-	 	 	
+	 	
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLayout(layout);
@@ -43,15 +43,18 @@ public class SlotMachine {
 		spin.setSize(50,50);
 		spin.setText("SPIN");
 		
-		
 		spinMachine(row1);
+		images.add(row1);
 		spinMachine(row2);
+		images.add(row2);
 		spinMachine(row3);
+		images.add(row3);
+		
 		
 		spinButton.add(spin);
 		
 		frame.add(images);
-		frame.add(spinButton);
+		frame.add(spin);
 
 	 
 		frame.pack();
